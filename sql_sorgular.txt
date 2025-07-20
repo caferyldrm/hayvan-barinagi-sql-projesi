@@ -1,0 +1,28 @@
+SELECT hayvan_adi, cinsiyet, yas, gelis_tarihi
+FROM hayvanlar;
+
+
+SELECT hayvan_adi, gelis_tarihi
+FROM hayvanlar
+WHERE YEAR(gelis_tarihi) = 2025;
+
+
+
+
+SELECT hayvan_adi
+FROM hayvanlar
+WHERE hayvan_id NOT IN (
+    SELECT hayvan_id FROM sahiplenmeler
+);
+
+
+
+
+
+SELECT hayvan_adi, yas
+FROM hayvanlar
+ORDER BY yas DESC
+LIMIT 3;
+
+
+
